@@ -1,0 +1,14 @@
+{
+  "name": "@shimon/monorepo",
+  "type": "module",
+  "private": true,
+  "workspaces": ["workspaces/*"],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.4"
+  },
+  "packageManager": "bun@1.0.29"
+}
