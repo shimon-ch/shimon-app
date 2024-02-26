@@ -1,14 +1,25 @@
 {
-  "name": "@shimon/monorepo",
-  "type": "module",
+  "name": "shimons",
   "private": true,
-  "workspaces": ["workspaces/*"],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "turbo": "^1.12.4"
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "prettier": "^3.1.1",
+    "turbo": "latest"
   },
-  "packageManager": "bun@1.0.29"
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.0.29",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "workspaces/*"
+  ]
 }
